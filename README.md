@@ -1,6 +1,6 @@
 # Extended Author Contact Methods
 
-Extends author contact methods in WordPress (Facebook, Twitter, Google+, LinkedIn, Pinterest).
+Extends author contact methods in WordPress (Facebook, Twitter, Google+, LinkedIn, Pinterest, Flattr).
 
 ## Installation
 
@@ -10,6 +10,8 @@ Extends author contact methods in WordPress (Facebook, Twitter, Google+, LinkedI
 
 ## Changelog
 
+* 0.0.2
+	* Add Flattr
 * 0.0.1
 	* Initial version
 
@@ -49,6 +51,12 @@ Extends author contact methods in WordPress (Facebook, Twitter, Google+, LinkedI
 <?php the_author_meta('pinterest') ?>
 ```
 
+### Flattr
+
+```php
+<?php the_author_meta('flattr') ?>
+```
+
 ## Examples
 
 ### Authorship with Google+
@@ -75,9 +83,15 @@ Extends author contact methods in WordPress (Facebook, Twitter, Google+, LinkedI
 </a>
 ```
 
+### Flattr
+
+```php
+<a href="https://flattr.com/submit/auto?url=<?php echo rawurlencode(get_permalink()) ?>&amp;user_id=<?php the_author_meta('flattr') ?>&amp;category=text&amp;title=<?php echo rawurlencode(get_the_title()) ?>" target="_blank">Flattr this!</a>
+```
+
 ## License
 
-Copyright (c) 2014 [websperts](http://websperts.com/)  
+Copyright (c) 2015 [websperts](http://websperts.com/)  
 Licensed under the MIT license.
 
 See LICENSE for more info.
